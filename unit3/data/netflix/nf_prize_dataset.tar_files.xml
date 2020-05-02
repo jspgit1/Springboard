@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file name="nf_prize_dataset.tar.gz" source="original">
+    <mtime>1454618860</mtime>
+    <size>697552028</size>
+    <md5>a8f23d2d76461211c6b4c0ca6df2547d</md5>
+    <crc32>3aadb394</crc32>
+    <sha1>7b20726fc17e3681fe0c75dcd032243c1f37ffba</sha1>
+    <format>GZIP</format>
+  </file>
+  <file name="nf_prize_dataset.tar_archive.torrent" source="metadata">
+    <btih>c47b7244d75a447babdffbf0469f9a5436a39cd5</btih>
+    <mtime>1485760041</mtime>
+    <size>28332</size>
+    <md5>0472ce8f198b8157a6e9290ace8ccb7d</md5>
+    <crc32>e15fe946</crc32>
+    <sha1>44ee48f70bd1bfb21d31cc8c68f38ad5f704eb68</sha1>
+    <format>Archive BitTorrent</format>
+  </file>
+  <file name="nf_prize_dataset.tar_files.xml" source="original">
+    <format>Metadata</format>
+    <md5>39646b746492319d47219ae891274623</md5>
+  </file>
+  <file name="nf_prize_dataset.tar_meta.sqlite" source="original">
+    <mtime>1454618883</mtime>
+    <size>9216</size>
+    <md5>b2a52f47d11e06a28dab8d20c246d940</md5>
+    <crc32>3797f13a</crc32>
+    <sha1>4a924d5db88d7e8b703c1e52ddc02e986ad7827e</sha1>
+    <format>Metadata</format>
+  </file>
+  <file name="nf_prize_dataset.tar_meta.xml" source="original">
+    <mtime>1485760036</mtime>
+    <size>882</size>
+    <format>Metadata</format>
+    <md5>f5ce31d895a041cab01b3f7088904e12</md5>
+    <crc32>ff35cf16</crc32>
+    <sha1>fe4a599bfb149784314f86d37a98b5b34ee8cf94</sha1>
+  </file>
+</files>
