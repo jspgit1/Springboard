@@ -1,0 +1,30 @@
+In order to get this mini project marked as completed, you will need to submit
+the code you wrote by working alongside the tutorial, as well as the data scraped 
+using the 2 different kind of spiders to verify they are working as expected.
+Make sure you execute the following 2 commands in order to capture the data scraped
+and save it as a JSON file:
+`scrapy crawl toscrape-css -o css-scraper-results.json`
+as well as:
+`scrapy crawl xpath-scraper-results.json -o xpath-scraper-results.json`
+
+
+'http://toscrape-css.toscrape.com/page/1/',
+        'http://quotes.toscrape.com/page/2/',
+
+
+response.xpath('//div[@id="images"]/a/text()').get()
+
+ <head>
+  <base href='http://example.com/' />
+  <title>Example website</title>
+ </head>
+ <body>
+  <div id='images'>
+   <a href='image1.html'>Name: My image 1 <br /><img src='image1_thumb.jpg' /></a>
+   <a href='image2.html'>Name: My image 2 <br /><img src='image2_thumb.jpg' /></a>
+   <a href='image3.html'>Name: My image 3 <br /><img src='image3_thumb.jpg' /></a>
+   <a href='image4.html'>Name: My image 4 <br /><img src='image4_thumb.jpg' /></a>
+   <a href='image5.html'>Name: My image 5 <br /><img src='image5_thumb.jpg' /></a>
+  </div>
+ </body>
+</html>

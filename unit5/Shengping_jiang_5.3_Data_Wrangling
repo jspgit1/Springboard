@@ -1,0 +1,627 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Shengping_jiang_5.3_Data_Wrangling\n",
+    "#Paddas series--one dimention data\n",
+    "import pandas as pd\n",
+    "\n",
+    "\n",
+    "google = pd.read_csv('../data/goog.csv', index_col='Date', parse_dates=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Open</th>\n",
+       "      <th>High</th>\n",
+       "      <th>Low</th>\n",
+       "      <th>Close</th>\n",
+       "      <th>Volume</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>Date</th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>2016-12-19</th>\n",
+       "      <td>790.219971</td>\n",
+       "      <td>797.659973</td>\n",
+       "      <td>786.270020</td>\n",
+       "      <td>794.200012</td>\n",
+       "      <td>1225900</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-20</th>\n",
+       "      <td>796.760010</td>\n",
+       "      <td>798.650024</td>\n",
+       "      <td>793.270020</td>\n",
+       "      <td>796.419983</td>\n",
+       "      <td>925100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-21</th>\n",
+       "      <td>795.840027</td>\n",
+       "      <td>796.676025</td>\n",
+       "      <td>787.099976</td>\n",
+       "      <td>794.559998</td>\n",
+       "      <td>1208700</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-22</th>\n",
+       "      <td>792.359985</td>\n",
+       "      <td>793.320007</td>\n",
+       "      <td>788.580017</td>\n",
+       "      <td>791.260010</td>\n",
+       "      <td>969100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-23</th>\n",
+       "      <td>790.900024</td>\n",
+       "      <td>792.739990</td>\n",
+       "      <td>787.280029</td>\n",
+       "      <td>789.909973</td>\n",
+       "      <td>623400</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                  Open        High         Low       Close   Volume\n",
+       "Date                                                               \n",
+       "2016-12-19  790.219971  797.659973  786.270020  794.200012  1225900\n",
+       "2016-12-20  796.760010  798.650024  793.270020  796.419983   925100\n",
+       "2016-12-21  795.840027  796.676025  787.099976  794.559998  1208700\n",
+       "2016-12-22  792.359985  793.320007  788.580017  791.260010   969100\n",
+       "2016-12-23  790.900024  792.739990  787.280029  789.909973   623400"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "google.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "DatetimeIndex: 61 entries, 2016-12-19 to 2017-03-17\n",
+      "Data columns (total 5 columns):\n",
+      "Open      61 non-null float64\n",
+      "High      61 non-null float64\n",
+      "Low       61 non-null float64\n",
+      "Close     61 non-null float64\n",
+      "Volume    61 non-null int64\n",
+      "dtypes: float64(4), int64(1)\n",
+      "memory usage: 2.9 KB\n"
+     ]
+    }
+   ],
+   "source": [
+    "google.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Date\n",
+       "2016-12-19    790.219971\n",
+       "2016-12-20    796.760010\n",
+       "2016-12-21    795.840027\n",
+       "2016-12-22    792.359985\n",
+       "2016-12-23    790.900024\n",
+       "Name: Open, dtype: float64"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "google['Open'][:5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "pandas.core.series.Series"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(google['Open'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Open</th>\n",
+       "      <th>High</th>\n",
+       "      <th>Low</th>\n",
+       "      <th>Close</th>\n",
+       "      <th>Volume</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>Date</th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>2016-12-19</th>\n",
+       "      <td>790.219971</td>\n",
+       "      <td>797.659973</td>\n",
+       "      <td>786.270020</td>\n",
+       "      <td>794.200012</td>\n",
+       "      <td>1225900</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-27</th>\n",
+       "      <td>790.679993</td>\n",
+       "      <td>797.859985</td>\n",
+       "      <td>787.656982</td>\n",
+       "      <td>791.549988</td>\n",
+       "      <td>789100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2017-01-03</th>\n",
+       "      <td>778.809998</td>\n",
+       "      <td>789.630005</td>\n",
+       "      <td>775.799988</td>\n",
+       "      <td>786.140015</td>\n",
+       "      <td>1643100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2017-01-05</th>\n",
+       "      <td>786.080017</td>\n",
+       "      <td>794.479980</td>\n",
+       "      <td>785.020020</td>\n",
+       "      <td>794.020020</td>\n",
+       "      <td>1315400</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2017-01-06</th>\n",
+       "      <td>795.260010</td>\n",
+       "      <td>807.900024</td>\n",
+       "      <td>792.203979</td>\n",
+       "      <td>806.150024</td>\n",
+       "      <td>1620500</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                  Open        High         Low       Close   Volume\n",
+       "Date                                                               \n",
+       "2016-12-19  790.219971  797.659973  786.270020  794.200012  1225900\n",
+       "2016-12-27  790.679993  797.859985  787.656982  791.549988   789100\n",
+       "2017-01-03  778.809998  789.630005  775.799988  786.140015  1643100\n",
+       "2017-01-05  786.080017  794.479980  785.020020  794.020020  1315400\n",
+       "2017-01-06  795.260010  807.900024  792.203979  806.150024  1620500"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "google_up = google[google['Close']>google['Open']]\n",
+    "google_up.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Open</th>\n",
+       "      <th>High</th>\n",
+       "      <th>Low</th>\n",
+       "      <th>Close</th>\n",
+       "      <th>Volume</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>Date</th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>2016-12-19</th>\n",
+       "      <td>790.219971</td>\n",
+       "      <td>797.659973</td>\n",
+       "      <td>786.270020</td>\n",
+       "      <td>794.200012</td>\n",
+       "      <td>1225900</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-20</th>\n",
+       "      <td>796.760010</td>\n",
+       "      <td>798.650024</td>\n",
+       "      <td>793.270020</td>\n",
+       "      <td>796.419983</td>\n",
+       "      <td>925100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-21</th>\n",
+       "      <td>795.840027</td>\n",
+       "      <td>796.676025</td>\n",
+       "      <td>787.099976</td>\n",
+       "      <td>794.559998</td>\n",
+       "      <td>1208700</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-22</th>\n",
+       "      <td>792.359985</td>\n",
+       "      <td>793.320007</td>\n",
+       "      <td>788.580017</td>\n",
+       "      <td>791.260010</td>\n",
+       "      <td>969100</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2016-12-23</th>\n",
+       "      <td>790.900024</td>\n",
+       "      <td>792.739990</td>\n",
+       "      <td>787.280029</td>\n",
+       "      <td>789.909973</td>\n",
+       "      <td>623400</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                  Open        High         Low       Close   Volume\n",
+       "Date                                                               \n",
+       "2016-12-19  790.219971  797.659973  786.270020  794.200012  1225900\n",
+       "2016-12-20  796.760010  798.650024  793.270020  796.419983   925100\n",
+       "2016-12-21  795.840027  796.676025  787.099976  794.559998  1208700\n",
+       "2016-12-22  792.359985  793.320007  788.580017  791.260010   969100\n",
+       "2016-12-23  790.900024  792.739990  787.280029  789.909973   623400"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "google_filtered = google[pd.isnull(google['Volume'])==False]\n",
+    "google_filtered.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Open</th>\n",
+       "      <th>High</th>\n",
+       "      <th>Low</th>\n",
+       "      <th>Close</th>\n",
+       "      <th>Volume</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>count</th>\n",
+       "      <td>61.000000</td>\n",
+       "      <td>61.000000</td>\n",
+       "      <td>61.000000</td>\n",
+       "      <td>61.000000</td>\n",
+       "      <td>6.100000e+01</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>mean</th>\n",
+       "      <td>814.005573</td>\n",
+       "      <td>817.755576</td>\n",
+       "      <td>809.734066</td>\n",
+       "      <td>814.561804</td>\n",
+       "      <td>1.361269e+06</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>std</th>\n",
+       "      <td>18.784303</td>\n",
+       "      <td>18.556004</td>\n",
+       "      <td>19.384799</td>\n",
+       "      <td>19.265955</td>\n",
+       "      <td>4.987376e+05</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>min</th>\n",
+       "      <td>778.809998</td>\n",
+       "      <td>782.780029</td>\n",
+       "      <td>770.409973</td>\n",
+       "      <td>771.820007</td>\n",
+       "      <td>6.234000e+05</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>25%</th>\n",
+       "      <td>799.679993</td>\n",
+       "      <td>802.700012</td>\n",
+       "      <td>793.270020</td>\n",
+       "      <td>801.340027</td>\n",
+       "      <td>1.057900e+06</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>50%</th>\n",
+       "      <td>809.510010</td>\n",
+       "      <td>815.250000</td>\n",
+       "      <td>804.539978</td>\n",
+       "      <td>809.559998</td>\n",
+       "      <td>1.247700e+06</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>75%</th>\n",
+       "      <td>828.659973</td>\n",
+       "      <td>833.250000</td>\n",
+       "      <td>825.059998</td>\n",
+       "      <td>830.630005</td>\n",
+       "      <td>1.494500e+06</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>max</th>\n",
+       "      <td>851.609985</td>\n",
+       "      <td>853.400024</td>\n",
+       "      <td>847.109985</td>\n",
+       "      <td>852.119995</td>\n",
+       "      <td>3.228900e+06</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "             Open        High         Low       Close        Volume\n",
+       "count   61.000000   61.000000   61.000000   61.000000  6.100000e+01\n",
+       "mean   814.005573  817.755576  809.734066  814.561804  1.361269e+06\n",
+       "std     18.784303   18.556004   19.384799   19.265955  4.987376e+05\n",
+       "min    778.809998  782.780029  770.409973  771.820007  6.234000e+05\n",
+       "25%    799.679993  802.700012  793.270020  801.340027  1.057900e+06\n",
+       "50%    809.510010  815.250000  804.539978  809.559998  1.247700e+06\n",
+       "75%    828.659973  833.250000  825.059998  830.630005  1.494500e+06\n",
+       "max    851.609985  853.400024  847.109985  852.119995  3.228900e+06"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# basic statistics\n",
+    "google.describe()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Date\n",
+       "2016-12-19         NaN\n",
+       "2016-12-20    0.002795\n",
+       "2016-12-21   -0.002335\n",
+       "2016-12-22   -0.004153\n",
+       "2016-12-23   -0.001706\n",
+       "Name: Return, dtype: float64"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "google['Return'] = google['Close'].pct_change()\n",
+    "google['Return'].iloc[0:5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Date\n",
+       "2016-12-19         NaN\n",
+       "2016-12-20    0.002791\n",
+       "2016-12-21   -0.002338\n",
+       "2016-12-22   -0.004162\n",
+       "2016-12-23   -0.001708\n",
+       "Name: LogReturn, dtype: float64"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "google['LogReturn'] = np.log(1+google['Return'])\n",
+    "google['LogReturn'].iloc[0:5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Index(['Open', 'High', 'Low', 'Close', 'Volume', 'Return', 'LogReturn'], dtype='object')"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "google.columns"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
