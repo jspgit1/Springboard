@@ -16,3 +16,6 @@ Total 16 people, 16-22 images per person</p>
 ### 4 Capstone Project Proposal
 <a href="capstone/step4_CapstoneProjectProposal.pdf">step4_CapstoneProjectProposal.pdf</a>
 <br>
+### 5 Data Wrangling & Exploration
+<a href="capstone/step5_Shengping_Jiang_12_5_capstone_submission-JupyterNotebook.pdf">step5_Shengping_Jiang_12_5_capstone_submission-JupyterNotebook.pdf</a>
+<br>
