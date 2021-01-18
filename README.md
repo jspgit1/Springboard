@@ -19,3 +19,6 @@ Total 16 people, 16-22 images per person</p>
 ### 5 Data Wrangling & Exploration
 <a href="capstone/step5_Shengping_Jiang_12_5_capstone_submission-JupyterNotebook.pdf">step5_Shengping_Jiang_12_5_capstone_submission-JupyterNotebook.pdf</a>
 <br>
+### 6 Experiment With Various Models: Several face detection methods
+<a href="capstone/Step6_ExperimentWithVariousModels_Several_face_detection_methods-JupyterNotebook.pdf">Step6_ExperimentWithVariousModels_Several_face_detection_methods-JupyterNotebook.pdf</a>
+<br>
