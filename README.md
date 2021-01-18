@@ -39,7 +39,9 @@ Total 16 people, 16-22 images per person</p>
 ### 11 Design Deployment Solution Architecture
 <a href="capstone/Step11_DesignYourDeploymentSolutionArchitecture_DeploymentSolutionArchitecture.pdf">Step11_DesignYourDeploymentSolutionArchitecture_DeploymentSolutionArchitecture.pdf</a>
 <br>
-
+### 12 Run Code End to End with Logging and testing
+<a href="capstone/Step12_RunYourCode_End-to-End_with_Logging_and_testing-JSP_Capstone_project_deployment-JupyterNotebook.pdf">Step12_RunYourCode_End-to-End_with_Logging_and_testing-JSP_Capstone_project_deployment-JupyterNotebook.pdf</a>
+<br>
 
 
 
