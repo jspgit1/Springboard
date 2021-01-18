@@ -35,6 +35,7 @@ Total 16 people, 16-22 images per person</p>
 <p>Use flask to build a web service. Use Docker to deploy the application as well as executing enviroment</p>
 <a href="capstone/Step10_PickYourDeploymentMethod_face_recognition_deployment_capstone_submission_21_6-JupyterNotebook.pdf">Step10_PickYourDeploymentMethod_face_recognition_deployment_capstone_submission_21_6-JupyterNotebook.pdf</a>
 <br>
+
 ### 11 Design Deployment Solution Architecture
 <a href="capstone/Step11_DesignYourDeploymentSolutionArchitecture_DeploymentSolutionArchitecture.pdf">Step11_DesignYourDeploymentSolutionArchitecture_DeploymentSolutionArchitecture.pdf</a>
 <br>
