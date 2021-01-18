@@ -22,3 +22,25 @@ Total 16 people, 16-22 images per person</p>
 ### 6 Experiment With Various Models: Several face detection methods
 <a href="capstone/Step6_ExperimentWithVariousModels_Several_face_detection_methods-JupyterNotebook.pdf">Step6_ExperimentWithVariousModels_Several_face_detection_methods-JupyterNotebook.pdf</a>
 <br>
+### 7 Machine Learning (DL) Prototype
+<a href="capstone/Step7_Shengping_Jiang_unit20_5_capstone_submission_ML_prototype-JupyterNotebook.pdf">Step7_Shengping_Jiang_unit20_5_capstone_submission_ML_prototype-JupyterNotebook.pdf</a>
+<br>
+### 8 Scale ML (DL) Prototype
+<a href="capstone/Step8_ ScaleYourML_Prototype_Shengping_Jiang_unit20_5_capstone_submission_2_ML_prototype-JupyterNotebook.pdf">Step8_ ScaleYourML_Prototype_Shengping_Jiang_unit20_5_capstone_submission_2_ML_prototype-JupyterNotebook.pdf</a>
+<br>
+### 9 Study Advanced Units
+<a href="capstone/Step9_StudyAdvancedUnits_Shengping_Jiang_unit20_5_capstone_submission_3_ML_prototype-JupyterNotebook.pdf">Step9_StudyAdvancedUnits_Shengping_Jiang_unit20_5_capstone_submission_3_ML_prototype-JupyterNotebook.pdf</a>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
