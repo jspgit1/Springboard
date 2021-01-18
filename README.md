@@ -31,7 +31,10 @@ Total 16 people, 16-22 images per person</p>
 ### 9 Study Advanced Units
 <a href="capstone/Step9_StudyAdvancedUnits_Shengping_Jiang_unit20_5_capstone_submission_3_ML_prototype-JupyterNotebook.pdf">Step9_StudyAdvancedUnits_Shengping_Jiang_unit20_5_capstone_submission_3_ML_prototype-JupyterNotebook.pdf</a>
 <br>
-
+### 10 Pick Deployment Method
+<p>Use flask to build a web service. Use Docker to deploy the application as well as executing enviroment</p>
+<a href="capstone/Step10_PickYourDeploymentMethod_face_recognition_deployment_capstone_submission_21_6-JupyterNotebook.pdf">Step10_PickYourDeploymentMethod_face_recognition_deployment_capstone_submission_21_6-JupyterNotebook.pdf</a>
+<br>
 
 
 
