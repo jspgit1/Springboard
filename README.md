@@ -42,13 +42,9 @@ Total 16 people, 16-22 images per person</p>
 ### 12 Run Code End to End with Logging and testing
 <a href="capstone/Step12_RunYourCode_End-to-End_with_Logging_and_testing-JSP_Capstone_project_deployment-JupyterNotebook.pdf">Step12_RunYourCode_End-to-End_with_Logging_and_testing-JSP_Capstone_project_deployment-JupyterNotebook.pdf</a>
 <br>
-
-
-
-
-
-
-
+### 13 Deployment Implementation: deployment capstone project as a docker image
+<a href="capstone/docker/JSP_Capstone_project_deployment_docker.ipynb">JSP_Capstone_project_deployment_docker.ipynb</a>
+<br>
 
 
 
