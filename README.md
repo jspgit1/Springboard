@@ -9,6 +9,10 @@ Total 16 people, 16-22 images per person</p>
 <p>2 Take pictures for internal people.
 5 people, 15-20 images per person</p>
 <br>
+
 ### 3 Summary of AI Services
 <a href="capstone/step3_SummaryAIservices.pdf">step3_SummaryAIservices.pdf</a>
+<br>
+### 4 Capstone Project Proposal
+<a href="capstone/step4_CapstoneProjectProposal.pdf">step4_CapstoneProjectProposal.pdf</a>
 <br>
