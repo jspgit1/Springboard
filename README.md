@@ -45,6 +45,9 @@ Total 16 people, 16-22 images per person</p>
 ### 13 Deployment Implementation: deployment capstone project as a docker image
 <a href="capstone/docker/JSP_Capstone_project_deployment_docker.ipynb">JSP_Capstone_project_deployment_docker.ipynb</a>
 <br>
-
+### 14 Post of capstone project: Build a CNN model of facial recognition
+<a href="capstone/face_recognition_CNN_n_squre_02.pdf">face_recognition_CNN_n_squre_02.pdf</a>
+<p>We use upper face images as training/validation dataset. The objective is to recognize masked faces
+<br>
 
 
